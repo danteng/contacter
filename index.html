@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<title>title</title>
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<link rel="stylesheet" href="global.css" type="text/css" />
+	<link rel="stylesheet" href="jScrollPane/jScrollPane.css" type="text/css" />
+	<link rel="stylesheet" href="yezi/yezi-common.css" type="text/css" />
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="jScrollPane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="jScrollPane/jScrollPane.js"></script>
+	<script type="text/javascript" src="yezi/yezi-dialog.js"></script>
+	<script type="text/javascript" src="yezi/yezi-search.js"></script>
+	<script type="text/javascript" src="yezi/yezi-list.js"></script>
+	<script type="text/javascript" src="contacts.js"></script>
+</head>
+<body>
+<div class="mesDialog clearfix" id="smsBox">
+	<div class="contactBox">
+		<div class="contactBar">
+			<div class="name">收信人</div>
+			<div class="contacts-list-btnAdd">+</div>
+			<div class="contacts-list-wrap">
+				<ul class="contacts-list-list clearfix">
+				</ul>
+				<div class="hidden contacts-list-groupWrap" style="display:none;">
+					<div class="contacts-list-groupTitle">
+						<p class="contacts-list-abbrTitle"></p>
+						<span class="contacts-list-num c_num">共<i></i>人</span>
+						<span class="contacts-list-num c_num_tips">已选择了<i></i>人</span>
+					</div>
+					<div class="contacts-list-groupListWrap">
+						<div class="contacts-list-groupList">
+						</div>
+						<div class="c_group_btm clearfix">
+							<span class="btn_clearAll" id="btn_clearAll">清空所选</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-list-inputSearch"><input type="text" value="" maxlength="11" /></div>
+		</div>
+		<div class="setPosition">
+			<div class="contacts-list-listDrop" style="display:none;">
+			</div>
+		</div>
+		<div class="contentBox">
+			<textarea ></textarea>
+		</div>
+		<div class="btnBar">
+			<div id="btn_send" class="btn_send">发送</div>
+		</div>
+	</div>
+	<div class="arrow" id="btn_recentContact"></div>
+	<div class="rightPosition">
+		<div class="recentContact" id="recentContact" style="width:0;overflow:hidden;">
+			<div class="recentTitle">最近联系人<i id="btn_clearRecent">清空</i></div>
+			<ul class="list-recentContacts" id="list-recentContacts">
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="mesDialog clearfix" id="smsBox1">
+	<div class="contactBox">
+		<div class="contactBar">
+			<div class="name">收信人</div>
+			<div class="contacts-list-btnAdd">+</div>
+			<div class="contacts-list-wrap">
+				<ul class="contacts-list-list clearfix">
+				</ul>
+				<div class="hidden contacts-list-groupWrap" style="display:none;">
+					<div class="contacts-list-groupTitle">
+						<p class="contacts-list-abbrTitle"></p>
+						<span class="contacts-list-num c_num">共<i></i>人</span>
+						<span class="contacts-list-num c_num_tips">已选择了<i></i>人</span>
+					</div>
+					<div class="contacts-list-groupListWrap">
+						<div class="contacts-list-groupList">
+						</div>
+						<div class="c_group_btm clearfix">
+							<span class="btn_clearAll" id="btn_clearAll1">清空所选</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-list-inputSearch"><input type="text" value="" maxlength="11" /></div>
+		</div>
+		<div class="setPosition">
+			<div class="contacts-list-listDrop" style="display:none;">
+			</div>
+		</div>
+		<div class="contentBox">
+			<textarea ></textarea>
+		</div>
+		<div class="btnBar">
+			<div id="btn_send1" class="btn_send">发送</div>
+		</div>
+	</div>
+	<div class="arrow" id="btn_recentContact1"></div>
+	<div class="rightPosition">
+		<div class="recentContact" id="recentContact1" style="width:0;overflow:hidden;">
+			<div class="recentTitle">最近联系人<i id="btn_clearRecent1">清空</i></div>
+			<ul class="list-recentContacts" id="list-recentContacts1">
+			</ul>
+		</div>
+	</div>
+</div>
+<div style="clear:both"></div>
+<div class="list-allContacts lll">
+	<div>本次已选联系人</div>
+	<div class="titlebar clearfix"><span>序列</span><em>text</em><p>mobile</p><i>ID</i></div>
+	<ul id="list-allContacts">
+	</ul>
+</div>
+
+</body>
+</html>

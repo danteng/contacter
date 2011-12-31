@@ -1,0 +1,173 @@
+
+.contacts-list-container{margin:10px;float:left;padding:5px 10px;width:338px;background:#F0F0FF;border:1px solid #BCE;border-radius:6px;font-size:12px;color:#336;}
+.contacts-list-container .contacts-list-wrap{float:left;height:20px;}
+.contacts-list-container .contacts-list-btnAdd{float:right;display:inline;margin-left:6px;width:20px;height:20px;background:#99C url(btns-icons.png) no-repeat 0 -70px;border-radius:9px;color:#FFF;text-indent:-99em;cursor:pointer;overflow:hidden;}
+.contacts-list-container .contacts-list-btnAdd.btn-grey{cursor:default;background-color:#CCC;}/* 若找不到dialog.js则变灰 */
+
+
+.contacts-list-list{margin:0 -6px 0 0;float:left;}/*float是为了解决ie6下的bug*/
+.contacts-list-list li{float:left;display:inline;height:20px;line-height:20px;width:100px;margin:0 6px 0 0;background:#DDF;border-radius:6px;font-family:arial;}
+.contacts-list-list li p{float:left;width:100%;height:100%;text-align:center;}
+.contacts-list-list li input{float:left;width:100%;height:100%;text-align:center;line-height:1.6;color:#FFF;border:0 none;background:transparent;}
+.contacts-list-list li i{float:right;position:relative;margin:-2px -3px -10px -11px;width:10px;height:9px;text-indent:-99em;font:0/0 arial;overflow:hidden;border:1px solid #889;border-radius:6px;background:#FFF url(btns-icons.png) no-repeat 0 -30px;cursor:pointer;display:none;}
+.contacts-list-list li.hover i,
+.contacts-list-list li:hover i{display:inline;}
+.contacts-list-inputSearch{float:right;display:inline;height:18px;width:302px;padding:1px 5px;background:#DDF;border-radius:6px;}
+.contacts-list-inputSearch input{float:right;display:inline;width:100%;height:18px;line-height:17px;background:transparent;border:0 none;font-family:arial;}
+.contacts-list-inputSearch.focus{background:#AAD;padding:1px 5px 0px 4px;border-top:1px solid #77a;border-left:1px solid #77a;}
+.contacts-list-inputSearch.focus input{color:#FFF;}
+
+.contacts-list-groupWrap{position:relative;top:0;left:0;width:206px;}
+.contacts-list-groupTitle,
+.contacts-list-groupListWrap{position:absolute;left:0;background:#DDF;border:1px solid #AAC;}
+.contacts-list-groupTitle{z-index:2;width:204px;height:25px;border-radius:6px 6px 0 0;border-bottom:0 none;cursor:pointer;background:#DDF url(btns-icons.png) no-repeat right -210px;}
+.contacts-list-groupListWrap{padding:10px 0;z-index:1;top:25px;width:336px;border-radius:0 6px 6px 6px;}
+.contacts-list-groupList{/* margin:5px 0 3px 0; */padding:0 5px;overflow:hidden;zoom:1;position:relative;/*relative ie下如果不设置就无法overflow:hidden*/}
+.contacts-list-groupList:after{content:'.';clear:both;display:block;font:0/0 arial;visibility:hidden;}
+
+.contacts-list-groupWrap .contacts-list-abbrTitle,
+.contacts-list-groupWrap .contacts-list-num{display:none;float:left;height:18px;line-height:18px;padding:0 0 0 10px;}
+.contacts-list-groupWrap .contacts-list-num i{font-style:normal;display:inline-block;padding:0 3px;}
+.contacts-list-groupWrap .c_num_tips{display:inline;padding:1px 0 0 12px;}
+.contacts-list-groupWrap.hidden{position:static;}
+.contacts-list-groupWrap.hidden .contacts-list-abbrTitle{display:inline;width:114px;text-align:left;overflow:hidden;white-space:nowrap;}
+.contacts-list-groupWrap.hidden .c_num{float:right;display:inline;padding:0 15px 0 9px;border-radius:6px;background:#CCF url(btns-icons.png) no-repeat right -190px;color:#669;}
+.contacts-list-groupWrap.hidden .c_num_tips{display:none;}
+
+.contacts-list-groupWrap .contacts-list-list{padding:0 0 5px;}
+.contacts-list-groupWrap .contacts-list-list li{margin:6px 6px 0 0;background:#99C;color:#FFF;}
+.contacts-list-groupWrap .contacts-list-list li i{display:block;}
+
+.contacts-list-groupWrap.hidden .contacts-list-groupTitle{position:static;height:18px;border:1px solid #AAC;border-radius:6px;}
+.contacts-list-groupWrap.hidden .contacts-list-groupListWrap{display:none;}
+
+/* 搜索下拉 */
+.setPosition{clear:left;position:relative;top:6px;left:0;height:0;font-size:0;line-height:0;}
+.contacts-list-listDrop{position:absolute;z-index:2;top:0;left:0;right:0;font-size:12px;line-height:18px;border:1px solid #CCE;border-top:0 none;border-radius:0 0 6px 6px;background:#F6F6FF;overflow:hidden;}
+.contacts-list-listDrop ul{border-top:1px solid #DDE;}
+.contacts-list-listDrop ul li{padding:5px 10px;cursor:pointer;vertical-align:top;zoom:1;}
+.contacts-list-listDrop ul li.hover{background:#99C;color:#FFF;}
+.contacts-list-listDrop ul li:after{content:'.';clear:both;display:block;font:0/0 arial;visibility:hidden;}
+.contacts-list-listDrop ul li.checked,
+.contacts-list-listDrop ul li.hover.checked{background:transparent;color:#CCC;cursor:default;}
+.contacts-list-listDrop ul li p{float:right;}
+.contacts-list-listDrop ul li em{float:left;}
+.contacts-list-listDrop .tips{width:100%;padding:6px 0;border-top:1px solid #CCE;color:#AAA;}
+.contacts-list-listDrop .tips p{padding:0 10px;}
+
+
+/* 弹出窗 */
+.contacts-box-dialog{position:absolute;top:50%;left:50%;background:#F0F0FF;border:1px solid #CCC;border-radius:6px;}
+.contacts-box-dialog table{border-collapse:separate;border-spacing:5px;}
+.contacts-box-dialog table td{text-align:left;background:#FFF;border-radius:4px;vertical-align:top;}
+.contacts-box-twoTree{width:210px;overflow:hidden;}
+.contacts-box-twoTreeInner{width:420px;}
+.contacts-box-btmBar{padding:5px 12px;background:#F0F0FF;}
+.contacts-box-tips{float:left;margin:3px 0 0 -4px;color:#999;}
+.contacts-box-btmBtns{float:right;}
+.contacts-box-btnSubmit,
+.contacts-box-btnCancel{float:right;display:inline;padding:2px 5px;width:50px;height:20px;line-height:20px;color:#FFF;text-align:center;background:url(btns-icons.png) no-repeat 0 -130px;cursor:pointer;}
+.contacts-box-btnCancel{margin-left:10px;background-position:0 -160px;color:#999}
+
+.contacts-box-title{padding:2px 5px;color:#666;background:#F0F0FF;}
+
+.contacts-box-searchBar{padding:5px;width:200px;}
+.contacts-box-searchBar input{float:left;width:170px;height:18px;line-height:18px;padding:2px;border:0 none;color:#AAA;}
+.contacts-box-searchBar input.contacts-box-realInput{color:#666;}
+.contacts-box-btnSearch{float:right;width:22px;height:22px;background:#FFF url(btns-icons.png) no-repeat right -100px;cursor:pointer;}
+.contacts-box-btnSearch.stopSearch{background-position:-62px -100px;}
+
+.contacts-box-status{padding:5px;}
+.contacts-box-btnClear{float:right;margin:2px 5px 0;color:#999;cursor:pointer;}
+.contacts-box-numbers{float:left;margin:2px 5px 0;}
+.contacts-box-selectedNum,
+.contacts-box-maxNum{font-style:normal;font-weight:bold;}
+
+.contacts-box-cTree,
+.contacts-box-cSearch,
+.contacts-box-selectedWrap{padding:5px;width:200px;height:200px;overflow-x:hidden;overflow-y:scroll;}
+.contacts-box-cTree{float:left;display:block;}
+.contacts-box-group{float:left;width:100%;padding-bottom:5px;}
+.contacts-box-group h4{padding:2px 5px;background:#DDF;line-height:16px;cursor:pointer;zoom:1;}
+.contacts-box-group h4:after{content:'.';display:block;clear:both;font:0/0 airal;visibility:hidden;}
+.contacts-box-group ul{padding:1px 13px;display:none;}
+.contacts-box-group li{padding:2px 5px;zoom:1;}
+.contacts-box-group li:after{content:'.';display:block;clear:both;font:0/0 airal;visibility:hidden;}
+.contacts-box-group li:hover{background:#EEF;}
+.contacts-box-group h4 i,
+.contacts-box-group li i{float:left;margin:2px 5px 2px 0;height:13px;width:13px;font:0/0 arial;background:url(btns-icons.png) no-repeat 0 0;cursor:default;}
+.contacts-box-group h4 i:hover,
+.contacts-box-group li i:hover{background-position:-13px 0;}
+.contacts-box-group h4 i:active,
+.contacts-box-group li i:active{background-position:-26px 0;}
+.contacts-box-group h4.checked i,
+.contacts-box-group li.checked i{background-position:0 -13px;}
+.contacts-box-group h4.checked i:hover,
+.contacts-box-group li.checked i:hover{background-position:-13px -13px;}
+.contacts-box-group h4.checked i:active,
+.contacts-box-group li.checked i:active{background-position:-26px -13px;}
+.contacts-box-group h4.checksome i{background-position:-39px -13px;}
+.contacts-box-group h4.checksome i:hover{background-position:-52px -13px;}
+.contacts-box-group h4.checksome i:active{background-position:-65px -13px;}
+.contacts-box-group h4 p,
+.contacts-box-group li p{float:left;}
+
+.contacts-box-cSearch{float:left;}
+.contacts-box-cSearch .contacts-box-group{padding:0;}
+.contacts-box-cSearch .contacts-box-group ul{display:block;padding:1px 0;}
+
+
+.contacts-box-selectedWrap{}
+.contacts-box-selectedWrap li{padding:2px 5px;zoom:1;}
+.contacts-box-selectedWrap li:after{content:'.';display:block;clear:both;font:0/0 airal;visibility:hidden;}
+.contacts-box-selectedWrap li:hover{background:#EEF;}
+.contacts-box-selectedWrap li i{float:right;margin:4px 5px 3px 0;height:10px;width:10px;font:0/0 arial;background:url(btns-icons.png) no-repeat 0 -30px;cursor:pointer;}
+
+
+.contacts-list-scrollBar{float:right;position:relative;width:0;top:0;right:0;font:0/0 arial;}
+.contacts-list-scrollLine{position:absolute;left:2px;top:-1px;bottom:-1px;width:3px;background:#99C;}
+.contacts-list-scrollThumb{position:absolute;left:0;height:16px;width:5px;background:#FFF;border:1px solid #99C;}
+
+.jScrollPaneTrack{cursor:default;right:2px;background:#FFF;border-radius:1px;overflow:hidden;}
+.jScrollPaneDrag{background:#99C;cursor:default;}
+
+
+
+
+/*====================*/
+.contacts-list-listDrop ul{border-color:#CCF;}
+.name{float:left;width:50px;padding:1px 0;}
+.contactBox{float:left;width:388px;}
+.mesDialog{width:auto;height:120px;}
+.contentBox{padding:6px 0;}
+.contentBox textarea{height:60px;width:386px;min-height:60px;max-height:200px;resize:none;border:1px solid #CCD;border-radius:4px;}
+.btn_send{float:right;padding:3px 14px;color:#FFF;background:#99D;cursor:pointer;border-radius:4px;}
+
+.c_group_btm{padding:5px 10px 0;}
+.btn_clearAll{float:left;cursor:pointer;color:#669;padding:2px 0;}
+
+.rightPosition{float:left;}
+.arrow{float:left;margin:40px -8px 0 2px;height:40px;width:8px;background:url(btns-icons.png) no-repeat 0 -240px;cursor:pointer;}
+.arrow.arrow_left{background-position:0 -280px;margin:40px 0 0 2px;}
+.recentContact{height:120px;text-align:left;width:0;overflow:hidden;}
+.recentTitle{border-bottom:1px solid #DDF;}
+
+.list-recentContacts{height:90px;overflow-x:hidden;overflow-y:scroll;border:1px solid #DDE;border-top:0 none;background:#FFF;}
+.list-recentContacts li{padding:3px 8px;cursor:pointer;}
+.list-recentContacts li:hover{background:#F4F4FF;}
+/* 自定义皮肤class */
+/* .contactsDialog{background:#DDF;} */
+
+.list-allContacts{float:left;width:400px;text-align:left;margin:10px;padding:10px;border:2px solid #DDE;}
+.list-allContacts .titlebar{padding:5px 0;background:#EEF;}
+.list-allContacts .titlebar em,
+.list-allContacts .titlebar p,
+.list-allContacts .titlebar i{font-weight:bold;}
+.list-allContacts em{text-align:right;}
+.list-allContacts span,
+.list-allContacts p,
+.list-allContacts em,
+.list-allContacts i{float:left;width:100px;padding:3px 6px;}
+.list-allContacts span{width:30px;}
+
+

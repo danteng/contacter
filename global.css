@@ -1,0 +1,45 @@
+/* CSS Document */
+/*reset*/
+html{background: #fff none repeat scroll 0 0;color: #333;overflow-y: scroll;}
+body, div, td{font-size: 12px;font-family: verdana;line-height: 1.4em;}
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, th, td, dl, dt, dd{margin: 0;padding: 0;}
+table{border-collapse: collapse;border-spacing: 0;}
+img{border:none;}
+address, caption, cite, code, dfn, em, th, var{font-style: normal;font-weight: normal;}
+ul li{list-style-image: none;list-style-position: outside;list-style-type: none;}
+caption, th{text-align: left;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;font-weight: normal;vertical-align: baseline;zoom: 1;}
+input, textarea, select, button{font-family: Verdana;font-size: 12px;font-weight: inherit; vertical-align:middle}
+input[type=radio], input[type=checkbox]{vertical-align: middle;}
+/*base*/
+a:focus{outline-style: none;outline-width: 0;}
+a:link, a:visited, a:active{color: #004d99;text-decoration: none;}
+a:hover{color: #333;text-decoration: underline;}
+.commonpadding{padding: 4px;}
+.number{color: #999;font-family: Arial;font-size: 12px;_vertical-align:text-top;}
+.datetime{color: #999;}
+.options{float: right;display: block;}
+.error{color: red;}strong{font-weight: bold;}
+.floatleft{float: left;}
+.floatright{float: right;}
+.aligncenter{text-align: center;}
+.alignright{text-align: right;}
+.alignleft{text-align: left;}
+.block{display: block;}
+.gray{color: #999;}
+.forcewrap{word-wrap: break-word;word-break:break-all;text-overflow: hidden;overflow: hidden;}
+.borderless{border: none;}
+label.checkbox, label.radio, label.text{padding-left: 4px;vertical-align: top;}
+/*clear*/
+.clear{clear:both;line-height: 0;height:0;font-size:0;}
+.clearfix:after {content: ".";display: block;height:0;clear: both;visibility: hidden}
+.clearfix {zoom:1}
+/*layout*/
+body{text-align: center}
+#header, #content, #footer{width: 960px;margin-right: auto;margin-left: auto;clear: both;text-align:left}
+#header:after,#content:after{content: ".";display: block;height: 0;clear: both;visibility: hidden}
+#footer{text-align: center;line-height: 1.5;margin-top: 8px;clear: both}
+#maincolumn{float:left}
+#sidecolumn{float:right}
+#leftcolumn{float:left}
+#rightcolumn{float:right}
